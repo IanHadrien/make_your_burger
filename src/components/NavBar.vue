@@ -1,7 +1,7 @@
 <template>
     <div id="nav">
         <router-link to="/">
-            <img src="" id="logo">
+            <img :src="logo" :alt="alt" id="logo">
         </router-link>
         <router-link to="/">Home</router-link> |
         <router-link to="/Pedidos">Pedidos</router-link>
@@ -10,7 +10,8 @@
 
 <script>
 export default {
-    name: "Navbar"
+    name: "Navbar",
+    props: ["logo", "alt"]
 }
 </script>
 

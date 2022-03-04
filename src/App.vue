@@ -1,5 +1,5 @@
 <template>
-  <Navbar />
+  <Navbar :logo="logo_src" :alt="app_name" />
   <router-view/>
   <Footer />
 </template>
@@ -11,7 +11,14 @@ import Footer from './components/Footer.vue';
 export default {
   components: {
     Navbar,
-    Footer
+    Footer,
+
+    data() {
+      return {
+        logo_src: "/img/burger.jpg",
+        app_name: "Make Your Burger"
+      }
+    },
   }
 }
 </script>
