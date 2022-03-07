@@ -40,7 +40,7 @@
 
         <div class="input-container">
           <input type="submit" class="submit-btn" value="Criar meu Burger!">
-        </div>        
+        </div>
 
       </form>
     </div>
@@ -85,12 +85,31 @@ export default {
     async createBurger(e) {
 
       e.preventDefault();
+
+      if(this.nome == "" || this.carne == "" || this.pao == "") {
+        console.log(this.nome == "", this.carne == "", this.pao == "");
+        console.log('Deu certo');
+        this.msg = `Pedido não pode ser realizado`;
+      } else {
+        this.getBurger();
+      }
+      
+      setTimeout(() => this.msg = "", 3000);
+
+      // Limpar os campos
+      this.nome = "";
+      this.carne = "";
+      this.pao = "";
+      this.opcionais = "";
+    },
+
+    async getBurger() {
       
       const data = {
         nome: this.nome,
         carne: this.carne,
         pao: this.pao,
-        opicionais: this.opcionais,
+        opcionais: this.opcionais,
         status: "Solicitado",
       }
 
@@ -104,18 +123,8 @@ export default {
 
       const res = await req.json();
 
-      // Colocar uma msg de sustemas
       this.msg = `Pedido N° ${res.id} realizado com sucesso`;
-
-      // Limpar msg
-      setTimeout(() => this.msg = "", 3000);
-
-      // Limpar os campos
-      this.nome = "";
-      this.carne = "";
-      this.pao = "";
-      this.opcionais = "";
-    }
+    },
   },
 
   mounted() {

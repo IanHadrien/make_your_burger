@@ -79,33 +79,25 @@
   ],
   "burgers": [
     {
-      "nome": "Ian Hadrien",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opicionais": [
-        "Bacon",
-        "Tomate"
+      "nome": "Fulano",
+      "carne": "Maminha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
       ],
       "status": "Solicitado",
       "id": 1
     },
     {
-      "nome": "Testando",
+      "nome": "Ciclano",
       "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opicionais": [
-        "Cebola roxa"
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Pepino",
+        "Tomate"
       ],
       "status": "Solicitado",
       "id": 2
-    },
-    {
-      "nome": null,
-      "carne": null,
-      "pao": null,
-      "opicionais": [],
-      "status": "Solicitado",
-      "id": 3
     }
   ]
 }
